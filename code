@@ -1,0 +1,49 @@
+class library:
+    def __init__(self,list,name):
+        self.booklist=list
+        self.name=name
+
+    def display(self):
+        for i in self.booklist:
+            print(i)
+            
+    def lendbook(self,book):
+        if book in self.booklist:
+            self.booklist.remove(book)
+        else:
+             print('{} book is not available'.format(book))
+    def addbook(self,book):
+        self.booklist.append(book)
+    def returnbook(self,book,):
+        self.booklist.append(book)
+        print("thanks for reading this book")
+if __name__ =='__main__' :
+    
+    harry=library(['python','c','c++'],'Raj librarry')
+    while(True):
+         print('welcome to',harry.name)
+         print('enter 1 for display book')
+         print('enter 2 for lend book')
+         print('enter 3 for add book')
+         print('enter 4 for return book')
+         user_choice=int(input())
+         if user_choice==1:
+             harry.display()
+         elif user_choice==2:
+            print("enter book name you want lend")
+            book=input()
+            harry.lendbook(book)
+         elif user_choice==3:
+             book=input('enter book name')
+             harry.addbook(book)
+         elif user_choice==4:
+             book=input('enter book name')
+             harry.returnbook(book)
+         else:
+            exit()
+             
+             
+         
+    
+        
+    
